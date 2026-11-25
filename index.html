@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CineMatch NLP — Analisis Sentimen Ulasan Film (XGBoost & LightGBM)</title>
+  <meta name="description" content="Platform Analisis Sentimen Ulasan Film Menggunakan Algoritma XGBoost dan LightGBM Berbasis TF-IDF untuk Penelitian & Paper Ilmiah" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top Sticky Desktop Navigation -->
+  <header class="main-header" id="mainHeader">
+    <div class="header-container">
+      <div class="header-brand">
+        <div class="brand-logo">
+          <svg viewBox="0 0 32 32" fill="none" class="brand-icon">
+            <rect x="2" y="5" width="28" height="22" rx="4" stroke="currentColor" stroke-width="2.2"/>
+            <path d="M2 11h28M2 21h28" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="16" cy="16" r="3.5" fill="currentColor"/>
+            <path d="M8 5v6M8 21v6M24 5v6M24 21v6" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">CineMatch <span class="brand-ai">NLP</span></span>
+          <span class="brand-sub">Sistem Prediksi Sentimen Film</span>
+        </div>
+      </div>
+
+      <!-- Quick Category Navigation (Inspired by reference horizontal tabs) -->
+      <nav class="header-tabs">
+        <button class="nav-tab-item active" data-genre="all">Semua Film</button>
+        <button class="nav-tab-item" data-genre="Action">Action</button>
+        <button class="nav-tab-item" data-genre="Sci-Fi">Sci-Fi</button>
+        <button class="nav-tab-item" data-genre="Drama">Drama</button>
+        <button class="nav-tab-item" data-genre="Horror">Horor</button>
+        <button class="nav-tab-item" data-genre="Comedy">Komedi</button>
+        <button class="nav-tab-item" data-genre="Thriller">Thriller</button>
+        <button class="nav-tab-item" data-genre="Animation">Animasi</button>
+      </nav>
+
+      <!-- Desktop Action Buttons -->
+      <div class="header-actions">
+        <button class="action-btn outline" id="btnScrollToPaper">
+          <span class="icon">📊</span> Data Paper
+        </button>
+        <button class="action-btn primary" id="btnScrollToNlp">
+          <span class="icon">⚡</span> Uji Model NLP
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Web Container (Desktop First) -->
+  <main class="web-main-container">
+
+    <!-- ============================================== -->
+    <!-- 1. CINEMA HERO BANNER (Inspirasi layout foto)  -->
+    <!-- ============================================== -->
+    <section class="cinema-hero-banner" id="heroBanner">
+      <div class="banner-overlay-pattern"></div>
+      <div class="banner-inner-content">
+        <div class="banner-left-text">
+          <div class="banner-pill-badge">🎬 NLP TEXT CLASSIFICATION FOR MOVIES</div>
+          <h1 class="banner-main-title">
+            <span class="sub-line">ANEKA PILIHAN</span>
+            <span class="highlight-line">SINEMA & FILM</span>
+          </h1>
+          <p class="banner-desc">
+            Sistem analisis sentimen cerdas untuk ulasan penonton film. Membandingkan performa algoritma 
+            <strong>XGBoost</strong> dan <strong>LightGBM</strong> berbasis ekstraksi fitur n-gram <strong>TF-IDF</strong>.
+          </p>
+          <div class="banner-meta-stats">
+            <div class="stat-box">
+              <span class="stat-val">95.00%</span>
+              <span class="stat-lbl">Akurasi XGBoost</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+              <span class="stat-val">93.33%</span>
+              <span class="stat-lbl">Akurasi LightGBM</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-box">
+              <span class="stat-val">0.017 ms</span>
+              <span class="stat-lbl">Latensi Tercepat</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="banner-right-visual">
+          <div class="poster-stack">
+            <div class="poster-item poster-1" title="Inception">
+              <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&auto=format&fit=crop&q=80" alt="Inception" />
+              <div class="poster-badge">★ 8.8</div>
+            </div>
+            <div class="poster-item poster-2" title="Interstellar">
+              <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=400&auto=format&fit=crop&q=80" alt="Interstellar" />
+              <div class="poster-badge">★ 8.7</div>
+            </div>
+            <div class="poster-item poster-3" title="The Dark Knight">
+              <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&auto=format&fit=crop&q=80" alt="Cinema" />
+              <div class="poster-badge">★ 9.0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gray Divider Accent -->
+    <div class="cinema-section-divider"></div>
+
+    <!-- ============================================== -->
+    <!-- 2. SECTION HEADER (KATEGORI & GENRE FILM UTAMA) -->
+    <!-- ============================================== -->
+    <div class="section-badge-header">
+      <div class="cinema-title-badge">KATEGORI & GENRE FILM UTAMA</div>
+      <p class="section-caption">Pilih kategori genre di bawah untuk menguji ulasan dan sentimen penonton secara spesifik</p>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- 3. GENRE CARDS STACK / GRID (Inspirasi dari foto)-->
+    <!-- ============================================== -->
+    <section class="genre-cards-grid" id="genreCardsGrid">
+
+      <!-- 1. ACTION & LAGA -->
+      <article class="genre-cinema-card" data-genre="Action">
+        <div class="genre-card-bg">
+          <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80" alt="Film Aksi Laga" />
+          <div class="genre-card-overlay"></div>
+        </div>
+        <div class="genre-card-info">
+          <div class="genre-badge-tag">GENRE 01</div>
+          <h2 class="genre-card-name">FILM AKSI & LAGA (ACTION)</h2>
+          <p class="genre-card-desc">Pertarungan intens, koreografi laga cepat, dan efek visual CGI megah.</p>
+        </div>
+        <div class="genre-card-action">
+          <button class="btn-test-genre">⚡ Uji Sentimen Ulasan</button>
+        </div>
+      </article>
+
+      <!-- 2. SCI-FI & FIKSI ILMIAH -->
+      <article class="genre-cinema-card" data-genre="Sci-Fi">
+        <div class="genre-card-bg">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80" alt="Fiksi Ilmiah" />
+          <div class="genre-card-overlay"></div>
+        </div>
+        <div class="genre-card-info">
+          <div class="genre-badge-tag">GENRE 02</div>
+          <h2 class="genre-card-name">SCI-FI & FIKSI ILMIAH</h2>
+          <p class="genre-card-desc">Perjalanan luar angkasa, masa depan distopia, time travel, dan teknologi canggih.</p>
+        </div>
+        <div class="genre-card-action">
+          <button class="btn-test-genre">⚡ Uji Sentimen Ulasan</button>
+        </div>
+      </article>
+
+      <!-- 3. DRAMA & MAKAKARYA -->
+      <article class="genre-cinema-card" data-genre="Drama">
+        <div class="genre-card-bg">
+          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&auto=format&fit=crop&q=80" alt="Film Drama" />
+          <div class="genre-card-overlay"></div>
+        </div>
+        <div class="genre-card-info">
+          <div class="genre-badge-tag">GENRE 03</div>
+          <h2 class="genre-card-name">DRAMA & MAKAKARYA</h2>
+          <p class="genre-card-desc">Konflik karakter mendalam, dialog emosional, dan alur cerita filosofis.</p>
+        </div>
+        <div class="genre-card-action">
+          <button class="btn-test-genre">⚡ Uji Sentimen Ulasan</button>
+        </div>
+      </article>
+
+      <!-- 4. HOROR & MISTERI -->
+      <article class="genre-cinema-card" data-genre="Horror">
+        <div class="genre-card-bg">
+          <img src="https://images.unsplash.com/photo-1509248961158-e54f6934749c?w=800&auto=format&fit=crop&q=80" alt="Film Horor" />
+          <div class="genre-card-overlay"></div>
+        </div>
+        <div class="genre-card-info">
+          <div class="genre-badge-tag">GENRE 04</div>
+          <h2 class="genre-card-name">HOROR & SUPERNATURAL</h2>
+          <p class="genre-card-desc">Atmosfer mencekam, misteri gaib, jumpscare menegangkan, dan teror psikologis.</p>
+        </div>
+        <div class="genre-card-action">
+          <button class="btn-test-genre">⚡ Uji Sentimen Ulasan</button>
+        </div>
+      </article>
+
+      <!-- 5. KOMEDI & HIBURAN -->
+      <article class="genre-cinema-card" data-genre="Comedy">
+        <div class="genre-card-bg">
+          <img src="https://images.unsplash.com/photo-1514306191717-452ec28c7814?w=800&auto=format&fit=crop&q=80" alt="Film Komedi" />
+          <div class="genre-card-overlay"></div>
+        </div>
+        <div class="genre-card-info">
+          <div class="genre-badge-tag">GENRE 05</div>
+          <h2 class="genre-card-name">KOMEDI & HIBURAN</h2>
+          <p class="genre-card-desc">Humor cerdas, situasi kocak mengocok perut, dan relaksasi tawa bersama.</p>
+        </div>
+        <div class="genre-card-action">
+          <button class="btn-test-genre">⚡ Uji Sentimen Ulasan</button>
+        </div>
+      </article>
+
+      <!-- 6. THRILLER & SUSPENSE -->
+      <article class="genre-cinema-card" data-genre="Thriller">
+        <div class="genre-card-bg">
+          <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800&auto=format&fit=crop&q=80" alt="Film Thriller" />
+          <div class="genre-card-overlay"></div>
+        </div>
+        <div class="genre-card-info">
+          <div class="genre-badge-tag">GENRE 06</div>
+          <h2 class="genre-card-name">THRILLER & PLOT TWIST</h2>
+          <p class="genre-card-desc">Teka-teki kriminal penuh ketegangan, investigasi detektif, dan ending tak terduga.</p>
+        </div>
+        <div class="genre-card-action">
+          <button class="btn-test-genre">⚡ Uji Sentimen Ulasan</button>
+        </div>
+      </article>
+
+      <!-- 7. ANIMASI & FANTASI -->
+      <article class="genre-cinema-card" data-genre="Animation">
+        <div class="genre-card-bg">
+          <img src="https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80" alt="Film Animasi" />
+          <div class="genre-card-overlay"></div>
+        </div>
+        <div class="genre-card-info">
+          <div class="genre-badge-tag">GENRE 07</div>
+          <h2 class="genre-card-name">ANIMASI & PETUALANGAN FANTASI</h2>
+          <p class="genre-card-desc">Visual grafis memanjakan mata, imajinasi magis, dan pesan moral mendalam.</p>
+        </div>
+        <div class="genre-card-action">
+          <button class="btn-test-genre">⚡ Uji Sentimen Ulasan</button>
+        </div>
+      </article>
+
+      <!-- 8. ROMANCE & KISAH CINTA -->
+      <article class="genre-cinema-card" data-genre="Romance">
+        <div class="genre-card-bg">
+          <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?w=800&auto=format&fit=crop&q=80" alt="Film Romance" />
+          <div class="genre-card-overlay"></div>
+        </div>
+        <div class="genre-card-info">
+          <div class="genre-badge-tag">GENRE 08</div>
+          <h2 class="genre-card-name">ROMANCE & KISAH CINTA</h2>
+          <p class="genre-card-desc">Chemistry pemeran yang manis, dinamika hubungan menyentuh hati, dan melodi romantis.</p>
+        </div>
+        <div class="genre-card-action">
+          <button class="btn-test-genre">⚡ Uji Sentimen Ulasan</button>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 4. LIVE NLP CLASSIFIER WORKBENCH               -->
+    <!-- ============================================== -->
+    <section class="nlp-workbench-section" id="nlpWorkbench">
+      <div class="workbench-header">
+        <div class="workbench-badge">⚡ WORKBENCH PREDIKSI REAL-TIME</div>
+        <h2 class="workbench-title">Uji Klasifikasi Sentimen Ulasan Film</h2>
+        <p class="workbench-subtitle">
+          Bandingkan langsung hasil inferensi algoritma <strong>XGBoost</strong> dan <strong>LightGBM</strong> dengan representasi vektor TF-IDF
+        </p>
+      </div>
+
+      <div class="workbench-grid">
+        <!-- Input & Sample Panel -->
+        <div class="wb-panel-left">
+          <div class="genre-context-bar" id="wbGenreContext">
+            <span>Target Genre: <strong id="wbTargetGenre">Semua Genre Film</strong></span>
+          </div>
+
+          <!-- Quick Samples Chips -->
+          <div class="sample-reviews-box">
+            <span class="sample-head-lbl">Pilih Contoh Ulasan Siap Uji:</span>
+            <div class="sample-chips-row" id="sampleChipsRow">
+              <button class="chip-btn pos" data-text="Alur ceritanya luar biasa seru, akting pemeran utama sangat memukau dan emosional!">
+                👍 Akting Memukau (Positif)
+              </button>
+              <button class="chip-btn pos" data-text="Plot twist di akhir film benar-benar tak terduga dan membuat merinding, mahakarya!">
+                👍 Plot Twist Mahakarya (Positif)
+              </button>
+              <button class="chip-btn neg" data-text="Alur cerita sangat membosankan dan lambat, bikin mengantuk di dalam bioskop.">
+                👎 Alur Lambat Bosan (Negatif)
+              </button>
+              <button class="chip-btn neg" data-text="Efek visual CGI sangat kasar dan murahan, jalan cerita hancur dan buang-buang tiket.">
+                👎 CGI Murahan Hancur (Negatif)
+              </button>
+              <button class="chip-btn pos" data-text="Sinematografi indah dengan sudut pengambilan gambar kelas dunia, layak menang Oscar!">
+                👍 Sinematografi Indah (Positif)
+              </button>
+            </div>
+          </div>
+
+          <!-- Input Textarea -->
+          <div class="review-input-area">
+            <label for="wbReviewInput" class="wb-label">Ketik atau Tempel Ulasan Film:</label>
+            <textarea id="wbReviewInput" rows="4" placeholder="Contoh: Film ini sangat bagus, adegan aksinya mendebarkan dan alur ceritanya tidak membosankan sama sekali!"></textarea>
+            <div class="wb-meta-row">
+              <span id="wbCharTokenCounter">0 Karakter | 0 Token</span>
+              <button class="wb-clear-btn" id="wbClearBtn">Kosongkan Teks</button>
+            </div>
+          </div>
+
+          <button class="wb-run-btn" id="wbRunClassifyBtn">
+            <span>⚡ Jalankan Prediksi (XGBoost & LightGBM)</span>
+          </button>
+        </div>
+
+        <!-- Real-Time Prediction Output Panel -->
+        <div class="wb-panel-right">
+          <h3 class="panel-right-title">Hasil Prediksi Sentimen Model</h3>
+
+          <div class="models-compare-grid">
+            <!-- XGBoost Card -->
+            <div class="model-box xgb-box" id="boxXGB">
+              <div class="model-box-top">
+                <span class="model-pill xgb">XGBoost</span>
+                <span class="model-tree-info">Extreme Gradient Boosting</span>
+              </div>
+              <div class="model-pred-display">
+                <span class="pred-text" id="wbXgbLabel">-</span>
+                <span class="pred-pct" id="wbXgbPct">0% Yakin</span>
+              </div>
+              <div class="bar-meter">
+                <div class="bar-meter-fill" id="wbXgbBar" style="width: 0%;"></div>
+              </div>
+              <div class="model-specs">
+                <div><span>🎯 Akurasi Uji:</span> <strong>95.00%</strong></div>
+                <div><span>⏱️ Latensi Inferensi:</span> <strong>0.025 ms</strong></div>
+                <div><span>🌲 Struktur:</span> <strong>max_depth=4, lr=0.1</strong></div>
+              </div>
+            </div>
+
+            <!-- LightGBM Card -->
+            <div class="model-box lgbm-box" id="boxLGBM">
+              <div class="model-box-top">
+                <span class="model-pill lgbm">LightGBM</span>
+                <span class="model-tree-info">Light Gradient Boosted Machine</span>
+              </div>
+              <div class="model-pred-display">
+                <span class="pred-text" id="wbLgbmLabel">-</span>
+                <span class="pred-pct" id="wbLgbmPct">0% Yakin</span>
+              </div>
+              <div class="bar-meter">
+                <div class="bar-meter-fill" id="wbLgbmBar" style="width: 0%;"></div>
+              </div>
+              <div class="model-specs">
+                <div><span>🎯 Akurasi Uji:</span> <strong>93.33%</strong></div>
+                <div><span>⚡ Latensi Inferensi:</span> <strong style="color: #10B981;">0.017 ms (Lebih Cepat)</strong></div>
+                <div><span>🌿 Struktur:</span> <strong>num_leaves=15, leaf-wise</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TF-IDF Keywords Highlight -->
+          <div class="tfidf-keywords-container">
+            <span class="tfidf-head-title">Fitur Kata TF-IDF Terdeteksi pada Teks:</span>
+            <div class="tfidf-tags-cloud" id="wbKeywordsCloud">
+              <span class="empty-state-tag">Masukkan ulasan untuk melihat fitur kata yang mendongkrak sentimen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- 5. PAPER BENCHMARK & EVALUATION DASHBOARD     -->
+    <!-- ============================================== -->
+    <section class="paper-dashboard-section" id="paperSection">
+      <div class="dashboard-header">
+        <div class="paper-badge">📄 DATA & METRIK UNTUK PAPER ILMIAH</div>
+        <h2 class="dashboard-title">Tabel Evaluasi & Komparasi Kinerja Model</h2>
+        <p class="dashboard-subtitle">
+          Data benchmark empiris siap digunakan untuk penulisan tugas paper/jurnal NLP Anda
+        </p>
+      </div>
+
+      <div class="paper-summary-card">
+        <h3 class="paper-card-heading">Judul Paper:</h3>
+        <p class="paper-title-text">
+          "Komparasi Kinerja Algoritma Extreme Gradient Boosting (XGBoost) dan Light Gradient Boosting Machine (LightGBM) Berbasis TF-IDF untuk Analisis Sentimen Ulasan Film"
+        </p>
+      </div>
+
+      <!-- Comparative Table -->
+      <div class="table-card">
+        <div class="table-card-header">
+          <span class="table-title">Tabel 1: Hasil Evaluasi pada Test Set (25% Stratified Split)</span>
+        </div>
+        <div class="table-responsive-wrapper">
+          <table class="benchmark-table">
+            <thead>
+              <tr>
+                <th>Model Algoritma</th>
+                <th>Akurasi (%)</th>
+                <th>Macro Precision</th>
+                <th>Macro Recall</th>
+                <th>Macro F1-Score</th>
+                <th>Waktu Latih</th>
+                <th>Latensi Inferensi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Logistic Regression (Baseline)</strong></td>
+                <td>98.33%</td>
+                <td>98.39%</td>
+                <td>98.33%</td>
+                <td>98.33%</td>
+                <td>0.0020 s</td>
+                <td>0.001 ms</td>
+              </tr>
+              <tr class="highlight-xgb-row">
+                <td><strong style="color: var(--xgb-blue);">XGBoost (Extreme Gradient Boosting)</strong></td>
+                <td><strong class="best-metric">95.00%</strong></td>
+                <td>95.45%</td>
+                <td>95.00%</td>
+                <td><strong class="best-metric">94.99%</strong></td>
+                <td>0.1230 s</td>
+                <td>0.025 ms</td>
+              </tr>
+              <tr class="highlight-lgbm-row">
+                <td><strong style="color: var(--lgbm-green);">LightGBM (Light Gradient Boosted)</strong></td>
+                <td>93.33%</td>
+                <td>93.33%</td>
+                <td>93.33%</td>
+                <td>93.33%</td>
+                <td><strong class="fast-metric">0.0221 s (5.5x Cepat)</strong></td>
+                <td><strong class="fast-metric">0.017 ms</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Confusion Matrix Comparison Grid -->
+      <div class="cm-dashboard-grid">
+        <div class="cm-card">
+          <h4 class="cm-card-title">Confusion Matrix: XGBoost (Akurasi 95.00%)</h4>
+          <div class="cm-table-grid">
+            <div class="c-cell head">Aktual \ Pred</div>
+            <div class="c-cell head">Pred: Negatif</div>
+            <div class="c-cell head">Pred: Positif</div>
+            <div class="c-cell head">Aktual: Negatif</div>
+            <div class="c-cell correct">TN: 30</div>
+            <div class="c-cell wrong">FP: 0</div>
+            <div class="c-cell head">Aktual: Positif</div>
+            <div class="c-cell wrong">FN: 3</div>
+            <div class="c-cell correct">TP: 27</div>
+          </div>
+        </div>
+
+        <div class="cm-card">
+          <h4 class="cm-card-title">Confusion Matrix: LightGBM (Akurasi 93.33%)</h4>
+          <div class="cm-table-grid">
+            <div class="c-cell head">Aktual \ Pred</div>
+            <div class="c-cell head">Pred: Negatif</div>
+            <div class="c-cell head">Pred: Positif</div>
+            <div class="c-cell head">Aktual: Negatif</div>
+            <div class="c-cell correct">TN: 27</div>
+            <div class="c-cell wrong">FP: 3</div>
+            <div class="c-cell head">Aktual: Positif</div>
+            <div class="c-cell wrong">FN: 1</div>
+            <div class="c-cell correct">TP: 29</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paper Action Bar -->
+      <div class="paper-download-bar">
+        <button class="btn-paper-action copy" id="btnCopyPaperSummary">
+          📋 Salin Rangkuman Lengkap Paper (Untuk Word/LaTeX)
+        </button>
+        <a href="data/movie_reviews.csv" download="movie_reviews.csv" class="btn-paper-action download">
+          💾 Unduh Dataset Ulasan Film (.CSV)
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cinema-footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p>© 2026 CineMatch NLP — Proyek Tugas Kuliah Analisis Sentimen Ulasan Film.</p>
+          <p class="footer-sub">Metode: Term Frequency-Inverse Document Frequency (TF-IDF) + XGBoost & LightGBM.</p>
+        </div>
+        <div class="footer-right">
+          <button class="btn-to-top" id="btnFooterToTop">Kembali ke Atas ↑</button>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

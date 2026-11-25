@@ -1,0 +1,16 @@
+
+# Large raw dataset
+data/Dataset Movie len 32m.csv
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

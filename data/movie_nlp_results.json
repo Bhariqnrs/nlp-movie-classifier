@@ -1,0 +1,2671 @@
+{
+  "metadata": {
+    "title": "Analisis Sentimen Ulasan Film Menggunakan XGBoost dan LightGBM berbasis TF-IDF",
+    "timestamp": "2026-09-29 08:24:21",
+    "total_dataset": 240,
+    "train_samples": 180,
+    "test_samples": 60,
+    "vocab_size": 500,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "split_ratio": "75:25 Stratified"
+  },
+  "results": {
+    "Logistic Regression (Baseline)": {
+      "accuracy": 98.33,
+      "macro_precision": 98.39,
+      "macro_recall": 98.33,
+      "macro_f1": 98.33,
+      "train_time_sec": 0.0026,
+      "inference_ms_per_sample": 0.0,
+      "confusion_matrix": [
+        [
+          30,
+          0
+        ],
+        [
+          1,
+          29
+        ]
+      ]
+    },
+    "XGBoost": {
+      "accuracy": 98.33,
+      "macro_precision": 98.39,
+      "macro_recall": 98.33,
+      "macro_f1": 98.33,
+      "train_time_sec": 0.1447,
+      "inference_ms_per_sample": 0.017,
+      "confusion_matrix": [
+        [
+          30,
+          0
+        ],
+        [
+          1,
+          29
+        ]
+      ]
+    },
+    "LightGBM": {
+      "accuracy": 83.33,
+      "macro_precision": 83.48,
+      "macro_recall": 83.33,
+      "macro_f1": 83.31,
+      "train_time_sec": 0.0199,
+      "inference_ms_per_sample": 0.033,
+      "confusion_matrix": [
+        [
+          24,
+          6
+        ],
+        [
+          4,
+          26
+        ]
+      ]
+    }
+  },
+  "feature_importances": {
+    "XGBoost": [
+      {
+        "word": "membosankan",
+        "score": 0.07977
+      },
+      {
+        "word": "waktu",
+        "score": 0.05409
+      },
+      {
+        "word": "payah",
+        "score": 0.05406
+      },
+      {
+        "word": "beli",
+        "score": 0.04822
+      },
+      {
+        "word": "mengecewakan",
+        "score": 0.04151
+      },
+      {
+        "word": "keren",
+        "score": 0.03978
+      },
+      {
+        "word": "alur",
+        "score": 0.03946
+      },
+      {
+        "word": "pilihan",
+        "score": 0.03779
+      },
+      {
+        "word": "bagus sekali",
+        "score": 0.03635
+      },
+      {
+        "word": "hancur",
+        "score": 0.03508
+      },
+      {
+        "word": "buruk kualitasnya",
+        "score": 0.03452
+      },
+      {
+        "word": "zonk",
+        "score": 0.0339
+      },
+      {
+        "word": "wajib nonton",
+        "score": 0.03105
+      },
+      {
+        "word": "rugi",
+        "score": 0.03021
+      },
+      {
+        "word": "wajib",
+        "score": 0.03014
+      }
+    ],
+    "LightGBM": [
+      {
+        "word": "cerita",
+        "score": 95.0
+      },
+      {
+        "word": "nonton",
+        "score": 93.0
+      },
+      {
+        "word": "banget",
+        "score": 74.0
+      },
+      {
+        "word": "tidak",
+        "score": 33.0
+      },
+      {
+        "word": "tanpa",
+        "score": 31.0
+      },
+      {
+        "word": "sekali",
+        "score": 23.0
+      },
+      {
+        "word": "zonk",
+        "score": 7.0
+      },
+      {
+        "word": "waktu",
+        "score": 3.0
+      }
+    ]
+  },
+  "sentiment_lexicon": {
+    "10": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "10 10": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "10 bintang": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "adegan": {
+      "pos_freq": 12,
+      "neg_freq": 12,
+      "polarity": 0.0
+    },
+    "adegan aksi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "adegan meloncat": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "akhir": {
+      "pos_freq": 18,
+      "neg_freq": 6,
+      "polarity": 0.5
+    },
+    "akhir antiklimaks": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "akhir benar": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "aksi": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "aksi kamera": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "aksi laga": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "aksi menegangkan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "akting": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "akting antagonis": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "akting pemeran": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "alur": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "alur cerita": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "anak": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "anak anak": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "animasi": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "animasi kaku": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "animasi visual": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "antagonis": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "antagonis begitu": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "antar": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "antar karakter": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "antiklimaks": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "antiklimaks payah": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "audio": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "audio payah": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "awal": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "awal sampai": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "bagus": {
+      "pos_freq": 20,
+      "neg_freq": 6,
+      "polarity": 0.538
+    },
+    "bagus sekali": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "banget": {
+      "pos_freq": 20,
+      "neg_freq": 20,
+      "polarity": 0.0
+    },
+    "banyak": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "banyak plot": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "bareng": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "bareng keluarga": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "begitu": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "begitu berbobot": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "begitu berkesan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "bela": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "bela diri": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "beli": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "beli tiketnya": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "benar": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "benar benar": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "benar tak": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "berantakan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "berantakan perpindahan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "berbobot": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "berbobot menakutkan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "berhasil": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "berhasil membawa": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "berisik": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "berisik jumpscare": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "berkesan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "berkualitas": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "berkualitas 10": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "berlebihan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "berlebihan bikin": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "bernyawa": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "bernyawa buang": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "biasa": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "biasa indah": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "bikin": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "bikin mengantuk": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "bikin pusing": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "bintang": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "bioskop": {
+      "pos_freq": 6,
+      "neg_freq": 18,
+      "polarity": -0.5
+    },
+    "bioskop hening": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "bioskop wajib": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "brilian": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "buang": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "buang buang": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "buang tiket": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "buang waktu": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "bukan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "bukan horor": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "buruk": {
+      "pos_freq": 0,
+      "neg_freq": 30,
+      "polarity": -1.0
+    },
+    "buruk dialog": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "buruk kualitasnya": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "cepat": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "cepat karena": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "cepat rapi": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "cerdas": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "cerdas mengocok": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "cerita": {
+      "pos_freq": 18,
+      "neg_freq": 42,
+      "polarity": -0.4
+    },
+    "cerita berantakan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "cerita fiksi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "cerita hancur": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "cerita membingungkan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "cerita membosankan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "cerita monoton": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "cerita padat": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "cgi": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "cgi kasar": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "cgi spektakuler": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "chemistry": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "chemistry antar": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "chemistry kedua": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "cinta": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "cinta klise": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "cinta manis": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "cringe": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "cringe penonton": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "data": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "data kredibel": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "dialog": {
+      "pos_freq": 0,
+      "neg_freq": 18,
+      "polarity": -1.0
+    },
+    "dialog kaku": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "dialog lebay": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "dialog percakapan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "dieksekusi": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "dieksekusi brilian": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "direkomendasikan": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "direkomendasikan pecinta": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "dokumenter": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "dokumenter membuka": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "dua": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "dua jam": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "dunia": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "dunia fantasi": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "durasi": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "durasi dua": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "efek": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "efek visual": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "ekspektasi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "ekspektasi tinggi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "ekspresi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "emosi": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "emosi penonton": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "ending": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "epik": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "epik latar": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "fantasi": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "fantasi megah": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "fatal": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "fatal membingungkan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "fiksi": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "fiksi ilmiah": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "gagal": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "gagal mengeksekusi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "garing": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "garing cringe": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "garing humor": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "hafalan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "hafalan tanpa": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "hambar": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "hancur": {
+      "pos_freq": 0,
+      "neg_freq": 25,
+      "polarity": -1.0
+    },
+    "hancur total": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "hasilnya": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "hasilnya zonk": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "hati": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "hati chemistry": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "hening": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "hening tanpa": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "hole": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "hole fatal": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "horor": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "horor seram": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "humor": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "humor relate": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "ilmiah": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "ilmiah kacau": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "ilmiah terbaik": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "indah": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "indah menambah": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "informatif": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "informatif penuh": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "ingin": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "ingin segera": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "intens": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "jalan": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "jalan cerita": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "jam": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "jam terasa": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "jangan": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "jelas": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "jelas pertarungan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "jumpscare": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "jumpscare murahan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kacau": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kacau banyak": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "kaku": {
+      "pos_freq": 0,
+      "neg_freq": 18,
+      "polarity": -1.0
+    },
+    "kaku seperti": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kaku tidak": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kaku warna": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "kamera": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kamera goyang": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "karakter": {
+      "pos_freq": 6,
+      "neg_freq": 12,
+      "polarity": -0.333
+    },
+    "karakter hambar": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "karakter matang": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "karakter utama": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "karena": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "karena alur": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "karya": {
+      "pos_freq": 25,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "karya spektakuler": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "kasar": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kasar murahan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "kecewa": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "kecewa parah": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "kedalaman": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "kedalaman rasa": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "kedua": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "kedua pemeran": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "kehidupan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "keluar": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "keluar studio": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "keluarga": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "keluarga bioskop": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "keras": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "keras menutupi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "keren": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "keren banget": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "kesal": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kesal sekali": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "keseluruhan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "keseluruhan cerita": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kisah": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "kisah cinta": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "klise": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "klise murahan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "komedi": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "komedi cerdas": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "konsep": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "konsep cerita": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "konsep time": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "konsisten": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "konsisten jalan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "konyol": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "konyol tanpa": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "koreografi": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "koreografi bela": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "koreografi tidak": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kredibel": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "kualitas": {
+      "pos_freq": 6,
+      "neg_freq": 25,
+      "polarity": -0.613
+    },
+    "kualitas naskah": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "kualitasnya": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "laga": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "laga terbaik": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "lama": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "lambat": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "lambat bikin": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "latar": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "latar dunia": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "lebay": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "lebay chemistry": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "lelucon": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "lelucon garing": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "loncat membingungkan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "luar": {
+      "pos_freq": 18,
+      "neg_freq": 6,
+      "polarity": 0.5
+    },
+    "luar biasa": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "mahakarya": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "manis": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "manis menyentuh": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "mata": {
+      "pos_freq": 18,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "mata informatif": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "mata pesan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "matang": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "matang sutradara": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "megah": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "megah memukau": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "melainkan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "melainkan berisik": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "meloncat": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "meloncat loncat": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "memanjakan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "memanjakan mata": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "membaca": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "membaca teks": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "membawa": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "membawa emosi": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "membingungkan": {
+      "pos_freq": 0,
+      "neg_freq": 18,
+      "polarity": -1.0
+    },
+    "membingungkan anak": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "membosankan": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "membosankan ingin": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "membosankan lambat": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "membuat": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "membuat merinding": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "membuka": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "membuka mata": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "memukau": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "memukau penonton": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "menakutkan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "menakutkan penulisan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "menambah": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "menambah kedalaman": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "menarik": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "menarik cerita": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "menegangkan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "menegangkan awal": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "mengantuk": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "mengantuk bioskop": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "mengecewakan": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "mengecewakan buang": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "mengeksekusi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "mengeksekusi premis": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "menghibur": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "menghibur seru": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "mengocok": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "mengocok perut": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "menontonnya": {
+      "pos_freq": 20,
+      "neg_freq": 6,
+      "polarity": 0.538
+    },
+    "menutupi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "menutupi suara": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "menyebalkan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "menyebalkan tidak": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "menyentuh": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "menyentuh hati": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "menyesal": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "menyesal beli": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "merinding": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "merinding mahakarya": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "merusak": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "merusak keseluruhan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "monoton": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "moral": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "moral begitu": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "motif": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "motif jelas": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "mual": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "mual koreografi": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "murahan": {
+      "pos_freq": 0,
+      "neg_freq": 18,
+      "polarity": -1.0
+    },
+    "murahan dialog": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "murahan jalan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "murahan terlihat": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "musik": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "musik latar": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "musik luar": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "naik": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "naik turun": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "naskah": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "naskah buruk": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "naskah skenario": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "natural": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "nonton": {
+      "pos_freq": 56,
+      "neg_freq": 30,
+      "polarity": 0.302
+    },
+    "nonton ulang": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "nyata": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "nyata mengecewakan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "pacing": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "pacing cerita": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "padat": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "padat menarik": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "parah": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "payah": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "pecinta": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "pecinta berkualitas": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "pemain": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "pemain tata": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "pemeran": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "pemeran kaku": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "pemeran natural": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "pengembangan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "pengembangan karakter": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "penjahatnya": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "penjahatnya konyol": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "penonton": {
+      "pos_freq": 18,
+      "neg_freq": 6,
+      "polarity": 0.5
+    },
+    "penonton naik": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "penonton satu": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "penuh": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "penuh data": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "penulisan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "penulisan naskah": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "percakapan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "percakapan pemain": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "perpindahan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "pertarungan": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "pertarungan akhir": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "perut": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "perut tanpa": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "pesan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "pesan moral": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "petualangan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "petualangan epik": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "pilihan": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "pilihan tepat": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "plot": {
+      "pos_freq": 6,
+      "neg_freq": 12,
+      "polarity": -0.333
+    },
+    "plot hole": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "plot twist": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "potensi bagus": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "premis": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "premis sebenarnya": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "puas": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "puas menontonnya": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "punya": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "punya potensi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "pusing": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "pusing mual": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "rapi": {
+      "pos_freq": 18,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "rapi intens": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "rasa": {
+      "pos_freq": 18,
+      "neg_freq": 6,
+      "polarity": 0.5
+    },
+    "rasa setiap": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "recommended": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "redup": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "redup tidak": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "relate": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "relate kehidupan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "rugi": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "rugi waktu": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "salah": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "salah satu": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "sampai": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "sampai akhir": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "satu": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "satu aksi": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "satu studio": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "sebenarnya": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "sebenarnya punya": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "segera": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "segera keluar": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "sekali": {
+      "pos_freq": 20,
+      "neg_freq": 12,
+      "polarity": 0.25
+    },
+    "sekali menontonnya": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "seperti": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "seperti membaca": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "seram": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "seram melainkan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "seru": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "seru ditonton": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "setiap": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "setiap adegan": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "skenario": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "skenario top": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "soundtrack": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "soundtrack tata": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "spektakuler": {
+      "pos_freq": 25,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "studio": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "studio bioskop": {
+      "pos_freq": 0,
+      "neg_freq": 12,
+      "polarity": -1.0
+    },
+    "suara": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "suara dialog": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "sutradara": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "sutradara berhasil": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "sutradara gagal": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tahun": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "tahun konsep": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "tak": {
+      "pos_freq": 30,
+      "neg_freq": 6,
+      "polarity": 0.667
+    },
+    "tak terduga": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "tanpa": {
+      "pos_freq": 6,
+      "neg_freq": 18,
+      "polarity": -0.5
+    },
+    "tanpa ekspresi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tanpa motif": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tanpa tawa": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tanpa terasa": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "tapi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tapi hasilnya": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tata": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "tata audio": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tata musik": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "tawa": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "teks": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "teks hafalan": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tepat": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "terasa": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "terasa cepat": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "terasa garing": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "terasa lama": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "terbaik": {
+      "pos_freq": 12,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "terbaik koreografi": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "terbaik tahun": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "terduga": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "terduga membuat": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "terlalu": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "terlalu keras": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "terlihat": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "terlihat tidak": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tidak": {
+      "pos_freq": 6,
+      "neg_freq": 42,
+      "polarity": -0.75
+    },
+    "tidak bernyawa": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tidak jelas": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tidak konsisten": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tidak menarik": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tidak nyata": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tiket": {
+      "pos_freq": 0,
+      "neg_freq": 25,
+      "polarity": -1.0
+    },
+    "tiketnya": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "time": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "time travel": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "tinggi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "tinggi tapi": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "top": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "total": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "travel": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "travel wormhole": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "turun": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "twist": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "twist akhir": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "ulang": {
+      "pos_freq": 20,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "utama": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "utama menyebalkan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "visual": {
+      "pos_freq": 12,
+      "neg_freq": 6,
+      "polarity": 0.333
+    },
+    "visual cgi": {
+      "pos_freq": 6,
+      "neg_freq": 6,
+      "polarity": 0.0
+    },
+    "visual memanjakan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    },
+    "wajib": {
+      "pos_freq": 25,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "wajib nonton": {
+      "pos_freq": 25,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "waktu": {
+      "pos_freq": 0,
+      "neg_freq": 25,
+      "polarity": -1.0
+    },
+    "waktu nonton": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "warna": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "warna redup": {
+      "pos_freq": 0,
+      "neg_freq": 6,
+      "polarity": -1.0
+    },
+    "wormhole": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "wormhole dieksekusi": {
+      "pos_freq": 6,
+      "neg_freq": 0,
+      "polarity": 1.0
+    },
+    "zonk": {
+      "pos_freq": 0,
+      "neg_freq": 25,
+      "polarity": -1.0
+    },
+    "zonk banget": {
+      "pos_freq": 0,
+      "neg_freq": 20,
+      "polarity": -1.0
+    },
+    "zonk mengecewakan": {
+      "pos_freq": 0,
+      "neg_freq": 0,
+      "polarity": 0.0
+    }
+  }
+}

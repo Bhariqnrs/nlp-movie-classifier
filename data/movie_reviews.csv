@@ -1,0 +1,241 @@
+text,label,genre,n_char,n_token
+"Alur ceritanya luar biasa seru, akting pemeran utama sangat memukau dan emosional.",1,Drama,82,12
+"Keren banget! Alur ceritanya luar biasa seru, akting pemeran utama sangat memukau dan emosional. Sangat puas menontonnya.",1,Drama,121,17
+"Pilihan tepat, alur ceritanya luar biasa seru, akting pemeran utama sangat memukau dan emosional. Recommended.",1,Drama,110,15
+"Bagus sekali filmnya, alur ceritanya luar biasa seru, akting pemeran utama sangat memukau dan emosional.",1,Drama,104,15
+"Karya spektakuler. Alur ceritanya luar biasa seru, akting pemeran utama sangat memukau dan emosional.",1,Drama,101,14
+"Wajib nonton ulang! Alur ceritanya luar biasa seru, akting pemeran utama sangat memukau dan emosional.",1,Drama,102,15
+"Efek visual CGI spektakuler, adegan pertarungan aksi menegangkan dari awal sampai akhir.",1,Action,88,12
+"Keren banget! Efek visual CGI spektakuler, adegan pertarungan aksi menegangkan dari awal sampai akhir. Sangat puas menontonnya.",1,Action,127,17
+"Pilihan tepat, efek visual cgi spektakuler, adegan pertarungan aksi menegangkan dari awal sampai akhir. Recommended.",1,Action,116,15
+"Bagus sekali filmnya, efek visual cgi spektakuler, adegan pertarungan aksi menegangkan dari awal sampai akhir.",1,Action,110,15
+"Karya spektakuler. Efek visual CGI spektakuler, adegan pertarungan aksi menegangkan dari awal sampai akhir.",1,Action,107,14
+"Wajib nonton ulang! Efek visual CGI spektakuler, adegan pertarungan aksi menegangkan dari awal sampai akhir.",1,Action,108,15
+"Plot twist di akhir film benar-benar tak terduga dan membuat merinding, mahakarya!",1,Thriller,82,13
+"Keren banget! Plot twist di akhir film benar-benar tak terduga dan membuat merinding, mahakarya! Sangat puas menontonnya.",1,Thriller,121,18
+"Pilihan tepat, plot twist di akhir film benar-benar tak terduga dan membuat merinding, mahakarya! Recommended.",1,Thriller,110,16
+"Bagus sekali filmnya, plot twist di akhir film benar-benar tak terduga dan membuat merinding, mahakarya!",1,Thriller,104,16
+"Karya spektakuler. Plot twist di akhir film benar-benar tak terduga dan membuat merinding, mahakarya!",1,Thriller,101,15
+"Wajib nonton ulang! Plot twist di akhir film benar-benar tak terduga dan membuat merinding, mahakarya!",1,Thriller,102,16
+"Komedi cerdas yang mengocok perut tanpa terasa garing, humor relate dengan kehidupan.",1,Comedy,85,12
+"Keren banget! Komedi cerdas yang mengocok perut tanpa terasa garing, humor relate dengan kehidupan. Sangat puas menontonnya.",1,Comedy,124,17
+"Pilihan tepat, komedi cerdas yang mengocok perut tanpa terasa garing, humor relate dengan kehidupan. Recommended.",1,Comedy,113,15
+"Bagus sekali filmnya, komedi cerdas yang mengocok perut tanpa terasa garing, humor relate dengan kehidupan.",1,Comedy,107,15
+"Karya spektakuler. Komedi cerdas yang mengocok perut tanpa terasa garing, humor relate dengan kehidupan.",1,Comedy,104,14
+"Wajib nonton ulang! Komedi cerdas yang mengocok perut tanpa terasa garing, humor relate dengan kehidupan.",1,Comedy,105,15
+"Film fiksi ilmiah terbaik tahun ini, konsep time travel dan wormhole dieksekusi brilian.",1,Sci-Fi,88,13
+"Keren banget! Film fiksi ilmiah terbaik tahun ini, konsep time travel dan wormhole dieksekusi brilian. Sangat puas menontonnya.",1,Sci-Fi,127,18
+"Pilihan tepat, film fiksi ilmiah terbaik tahun ini, konsep time travel dan wormhole dieksekusi brilian. Recommended.",1,Sci-Fi,116,16
+"Bagus sekali filmnya, film fiksi ilmiah terbaik tahun ini, konsep time travel dan wormhole dieksekusi brilian.",1,Sci-Fi,110,16
+"Karya spektakuler. Film fiksi ilmiah terbaik tahun ini, konsep time travel dan wormhole dieksekusi brilian.",1,Sci-Fi,107,15
+"Wajib nonton ulang! Film fiksi ilmiah terbaik tahun ini, konsep time travel dan wormhole dieksekusi brilian.",1,Sci-Fi,108,16
+"Suasana horor mencekam, jumpscare rapi dan tata suara scoring musik sangat mendukung.",1,Horror,85,12
+"Keren banget! Suasana horor mencekam, jumpscare rapi dan tata suara scoring musik sangat mendukung. Sangat puas menontonnya.",1,Horror,124,17
+"Pilihan tepat, suasana horor mencekam, jumpscare rapi dan tata suara scoring musik sangat mendukung. Recommended.",1,Horror,113,15
+"Bagus sekali filmnya, suasana horor mencekam, jumpscare rapi dan tata suara scoring musik sangat mendukung.",1,Horror,107,15
+"Karya spektakuler. Suasana horor mencekam, jumpscare rapi dan tata suara scoring musik sangat mendukung.",1,Horror,104,14
+"Wajib nonton ulang! Suasana horor mencekam, jumpscare rapi dan tata suara scoring musik sangat mendukung.",1,Horror,105,15
+"Kisah cinta yang manis dan menyentuh hati, chemistry kedua pemeran sangat natural.",1,Romance,82,12
+"Keren banget! Kisah cinta yang manis dan menyentuh hati, chemistry kedua pemeran sangat natural. Sangat puas menontonnya.",1,Romance,121,17
+"Pilihan tepat, kisah cinta yang manis dan menyentuh hati, chemistry kedua pemeran sangat natural. Recommended.",1,Romance,110,15
+"Bagus sekali filmnya, kisah cinta yang manis dan menyentuh hati, chemistry kedua pemeran sangat natural.",1,Romance,104,15
+"Karya spektakuler. Kisah cinta yang manis dan menyentuh hati, chemistry kedua pemeran sangat natural.",1,Romance,101,14
+"Wajib nonton ulang! Kisah cinta yang manis dan menyentuh hati, chemistry kedua pemeran sangat natural.",1,Romance,102,15
+"Sinematografi indah dengan sudut pengambilan gambar kelas dunia, layak menang Oscar!",1,Drama,84,11
+"Keren banget! Sinematografi indah dengan sudut pengambilan gambar kelas dunia, layak menang Oscar! Sangat puas menontonnya.",1,Drama,123,16
+"Pilihan tepat, sinematografi indah dengan sudut pengambilan gambar kelas dunia, layak menang oscar! Recommended.",1,Drama,112,14
+"Bagus sekali filmnya, sinematografi indah dengan sudut pengambilan gambar kelas dunia, layak menang oscar!",1,Drama,106,14
+"Karya spektakuler. Sinematografi indah dengan sudut pengambilan gambar kelas dunia, layak menang Oscar!",1,Drama,103,13
+"Wajib nonton ulang! Sinematografi indah dengan sudut pengambilan gambar kelas dunia, layak menang Oscar!",1,Drama,104,14
+"Animasi visual sangat memanjakan mata, pesan moral film ini begitu dalam dan berkesan.",1,Animation,86,13
+"Keren banget! Animasi visual sangat memanjakan mata, pesan moral film ini begitu dalam dan berkesan. Sangat puas menontonnya.",1,Animation,125,18
+"Pilihan tepat, animasi visual sangat memanjakan mata, pesan moral film ini begitu dalam dan berkesan. Recommended.",1,Animation,114,16
+"Bagus sekali filmnya, animasi visual sangat memanjakan mata, pesan moral film ini begitu dalam dan berkesan.",1,Animation,108,16
+"Karya spektakuler. Animasi visual sangat memanjakan mata, pesan moral film ini begitu dalam dan berkesan.",1,Animation,105,15
+"Wajib nonton ulang! Animasi visual sangat memanjakan mata, pesan moral film ini begitu dalam dan berkesan.",1,Animation,106,16
+"Pengembangan karakter sangat matang, sutradara berhasil membawa emosi penonton naik turun.",1,Drama,90,11
+"Keren banget! Pengembangan karakter sangat matang, sutradara berhasil membawa emosi penonton naik turun. Sangat puas menontonnya.",1,Drama,129,16
+"Pilihan tepat, pengembangan karakter sangat matang, sutradara berhasil membawa emosi penonton naik turun. Recommended.",1,Drama,118,14
+"Bagus sekali filmnya, pengembangan karakter sangat matang, sutradara berhasil membawa emosi penonton naik turun.",1,Drama,112,14
+"Karya spektakuler. Pengembangan karakter sangat matang, sutradara berhasil membawa emosi penonton naik turun.",1,Drama,109,13
+"Wajib nonton ulang! Pengembangan karakter sangat matang, sutradara berhasil membawa emosi penonton naik turun.",1,Drama,110,14
+"Salah satu film aksi laga terbaik, koreografi bela diri cepat, rapi, dan intens.",1,Action,80,13
+"Keren banget! Salah satu film aksi laga terbaik, koreografi bela diri cepat, rapi, dan intens. Sangat puas menontonnya.",1,Action,119,18
+"Pilihan tepat, salah satu film aksi laga terbaik, koreografi bela diri cepat, rapi, dan intens. Recommended.",1,Action,108,16
+"Bagus sekali filmnya, salah satu film aksi laga terbaik, koreografi bela diri cepat, rapi, dan intens.",1,Action,102,16
+"Karya spektakuler. Salah satu film aksi laga terbaik, koreografi bela diri cepat, rapi, dan intens.",1,Action,99,15
+"Wajib nonton ulang! Salah satu film aksi laga terbaik, koreografi bela diri cepat, rapi, dan intens.",1,Action,100,16
+"Film dokumenter yang sangat membuka mata dan informatif, penuh data kredibel.",1,Documentary,77,11
+"Keren banget! Film dokumenter yang sangat membuka mata dan informatif, penuh data kredibel. Sangat puas menontonnya.",1,Documentary,116,16
+"Pilihan tepat, film dokumenter yang sangat membuka mata dan informatif, penuh data kredibel. Recommended.",1,Documentary,105,14
+"Bagus sekali filmnya, film dokumenter yang sangat membuka mata dan informatif, penuh data kredibel.",1,Documentary,99,14
+"Karya spektakuler. Film dokumenter yang sangat membuka mata dan informatif, penuh data kredibel.",1,Documentary,96,13
+"Wajib nonton ulang! Film dokumenter yang sangat membuka mata dan informatif, penuh data kredibel.",1,Documentary,97,14
+"Sangat menghibur dan seru ditonton bareng keluarga di bioskop, wajib nonton!",1,Adventure,76,11
+"Keren banget! Sangat menghibur dan seru ditonton bareng keluarga di bioskop, wajib nonton! Sangat puas menontonnya.",1,Adventure,115,16
+"Pilihan tepat, sangat menghibur dan seru ditonton bareng keluarga di bioskop, wajib nonton! Recommended.",1,Adventure,104,14
+"Bagus sekali filmnya, sangat menghibur dan seru ditonton bareng keluarga di bioskop, wajib nonton!",1,Adventure,98,14
+"Karya spektakuler. Sangat menghibur dan seru ditonton bareng keluarga di bioskop, wajib nonton!",1,Adventure,95,13
+"Wajib nonton ulang! Sangat menghibur dan seru ditonton bareng keluarga di bioskop, wajib nonton!",1,Adventure,96,14
+"Soundtrack dan tata musik luar biasa indah, menambah kedalaman rasa di setiap adegan.",1,Drama,85,13
+"Keren banget! Soundtrack dan tata musik luar biasa indah, menambah kedalaman rasa di setiap adegan. Sangat puas menontonnya.",1,Drama,124,18
+"Pilihan tepat, soundtrack dan tata musik luar biasa indah, menambah kedalaman rasa di setiap adegan. Recommended.",1,Drama,113,16
+"Bagus sekali filmnya, soundtrack dan tata musik luar biasa indah, menambah kedalaman rasa di setiap adegan.",1,Drama,107,16
+"Karya spektakuler. Soundtrack dan tata musik luar biasa indah, menambah kedalaman rasa di setiap adegan.",1,Drama,104,15
+"Wajib nonton ulang! Soundtrack dan tata musik luar biasa indah, menambah kedalaman rasa di setiap adegan.",1,Drama,105,16
+"Misteri pembunuhan tersusun rapi penuh teka-teki cerdas, penonton diajak berpikir.",1,Mystery,82,11
+"Keren banget! Misteri pembunuhan tersusun rapi penuh teka-teki cerdas, penonton diajak berpikir. Sangat puas menontonnya.",1,Mystery,121,16
+"Pilihan tepat, misteri pembunuhan tersusun rapi penuh teka-teki cerdas, penonton diajak berpikir. Recommended.",1,Mystery,110,14
+"Bagus sekali filmnya, misteri pembunuhan tersusun rapi penuh teka-teki cerdas, penonton diajak berpikir.",1,Mystery,104,14
+"Karya spektakuler. Misteri pembunuhan tersusun rapi penuh teka-teki cerdas, penonton diajak berpikir.",1,Mystery,101,13
+"Wajib nonton ulang! Misteri pembunuhan tersusun rapi penuh teka-teki cerdas, penonton diajak berpikir.",1,Mystery,102,14
+"Akting antagonis begitu berbobot dan menakutkan, penulisan naskah skenario top.",1,Thriller,79,10
+"Keren banget! Akting antagonis begitu berbobot dan menakutkan, penulisan naskah skenario top. Sangat puas menontonnya.",1,Thriller,118,15
+"Pilihan tepat, akting antagonis begitu berbobot dan menakutkan, penulisan naskah skenario top. Recommended.",1,Thriller,107,13
+"Bagus sekali filmnya, akting antagonis begitu berbobot dan menakutkan, penulisan naskah skenario top.",1,Thriller,101,13
+"Karya spektakuler. Akting antagonis begitu berbobot dan menakutkan, penulisan naskah skenario top.",1,Thriller,98,12
+"Wajib nonton ulang! Akting antagonis begitu berbobot dan menakutkan, penulisan naskah skenario top.",1,Thriller,99,13
+Film petualangan epik dengan latar dunia fantasi megah yang memukau penonton.,1,Fantasy,77,11
+Keren banget! Film petualangan epik dengan latar dunia fantasi megah yang memukau penonton. Sangat puas menontonnya.,1,Fantasy,116,16
+"Pilihan tepat, film petualangan epik dengan latar dunia fantasi megah yang memukau penonton. Recommended.",1,Fantasy,105,14
+"Bagus sekali filmnya, film petualangan epik dengan latar dunia fantasi megah yang memukau penonton.",1,Fantasy,99,14
+Karya spektakuler. Film petualangan epik dengan latar dunia fantasi megah yang memukau penonton.,1,Fantasy,96,13
+Wajib nonton ulang! Film petualangan epik dengan latar dunia fantasi megah yang memukau penonton.,1,Fantasy,97,14
+"Transisi cerita halus, pacing pas tidak terburu-buru dan akhir cerita sangat memuaskan.",1,Sci-Fi,87,13
+"Keren banget! Transisi cerita halus, pacing pas tidak terburu-buru dan akhir cerita sangat memuaskan. Sangat puas menontonnya.",1,Sci-Fi,126,18
+"Pilihan tepat, transisi cerita halus, pacing pas tidak terburu-buru dan akhir cerita sangat memuaskan. Recommended.",1,Sci-Fi,115,16
+"Bagus sekali filmnya, transisi cerita halus, pacing pas tidak terburu-buru dan akhir cerita sangat memuaskan.",1,Sci-Fi,109,16
+"Karya spektakuler. Transisi cerita halus, pacing pas tidak terburu-buru dan akhir cerita sangat memuaskan.",1,Sci-Fi,106,15
+"Wajib nonton ulang! Transisi cerita halus, pacing pas tidak terburu-buru dan akhir cerita sangat memuaskan.",1,Sci-Fi,107,16
+Durasi dua jam terasa cepat karena alur cerita sangat padat dan menarik!,1,Action,72,12
+Keren banget! Durasi dua jam terasa cepat karena alur cerita sangat padat dan menarik! Sangat puas menontonnya.,1,Action,111,17
+"Pilihan tepat, durasi dua jam terasa cepat karena alur cerita sangat padat dan menarik! Recommended.",1,Action,100,15
+"Bagus sekali filmnya, durasi dua jam terasa cepat karena alur cerita sangat padat dan menarik!",1,Action,94,15
+Karya spektakuler. Durasi dua jam terasa cepat karena alur cerita sangat padat dan menarik!,1,Action,91,14
+Wajib nonton ulang! Durasi dua jam terasa cepat karena alur cerita sangat padat dan menarik!,1,Action,92,15
+"Sangat direkomendasikan untuk pecinta film berkualitas, 10 dari 10 bintang!",1,Umum,75,8
+"Keren banget! Sangat direkomendasikan untuk pecinta film berkualitas, 10 dari 10 bintang! Sangat puas menontonnya.",1,Umum,114,13
+"Pilihan tepat, sangat direkomendasikan untuk pecinta film berkualitas, 10 dari 10 bintang! Recommended.",1,Umum,103,11
+"Bagus sekali filmnya, sangat direkomendasikan untuk pecinta film berkualitas, 10 dari 10 bintang!",1,Umum,97,11
+"Karya spektakuler. Sangat direkomendasikan untuk pecinta film berkualitas, 10 dari 10 bintang!",1,Umum,94,10
+"Wajib nonton ulang! Sangat direkomendasikan untuk pecinta film berkualitas, 10 dari 10 bintang!",1,Umum,95,11
+"Alur cerita sangat membosankan dan lambat, bikin mengantuk di dalam bioskop.",0,Drama,76,11
+"Kecewa parah! Alur cerita sangat membosankan dan lambat, bikin mengantuk di dalam bioskop. Menyesal beli tiketnya.",0,Drama,114,16
+"Jangan tonton film ini, alur cerita sangat membosankan dan lambat, bikin mengantuk di dalam bioskop. Hancur total.",0,Drama,114,17
+"Sangat buruk kualitasnya, alur cerita sangat membosankan dan lambat, bikin mengantuk di dalam bioskop.",0,Drama,102,14
+"Zonk banget. Alur cerita sangat membosankan dan lambat, bikin mengantuk di dalam bioskop.",0,Drama,89,13
+"Rugi waktu nonton, Alur cerita sangat membosankan dan lambat, bikin mengantuk di dalam bioskop.",0,Drama,95,14
+Akting pemeran sangat kaku seperti membaca teks hafalan tanpa ekspresi.,0,Drama,71,10
+Kecewa parah! Akting pemeran sangat kaku seperti membaca teks hafalan tanpa ekspresi. Menyesal beli tiketnya.,0,Drama,109,15
+"Jangan tonton film ini, akting pemeran sangat kaku seperti membaca teks hafalan tanpa ekspresi. Hancur total.",0,Drama,109,16
+"Sangat buruk kualitasnya, akting pemeran sangat kaku seperti membaca teks hafalan tanpa ekspresi.",0,Drama,97,13
+Zonk banget. Akting pemeran sangat kaku seperti membaca teks hafalan tanpa ekspresi.,0,Drama,84,12
+"Rugi waktu nonton, Akting pemeran sangat kaku seperti membaca teks hafalan tanpa ekspresi.",0,Drama,90,13
+"Efek visual CGI sangat kasar dan murahan, terlihat tidak nyata dan mengecewakan.",0,Action,80,12
+"Kecewa parah! Efek visual CGI sangat kasar dan murahan, terlihat tidak nyata dan mengecewakan. Menyesal beli tiketnya.",0,Action,118,17
+"Jangan tonton film ini, efek visual cgi sangat kasar dan murahan, terlihat tidak nyata dan mengecewakan. Hancur total.",0,Action,118,18
+"Sangat buruk kualitasnya, efek visual cgi sangat kasar dan murahan, terlihat tidak nyata dan mengecewakan.",0,Action,106,15
+"Zonk banget. Efek visual CGI sangat kasar dan murahan, terlihat tidak nyata dan mengecewakan.",0,Action,93,14
+"Rugi waktu nonton, Efek visual CGI sangat kasar dan murahan, terlihat tidak nyata dan mengecewakan.",0,Action,99,15
+Plot twist maksa dan ending menggantung tidak masuk akal sama sekali.,0,Thriller,69,11
+Kecewa parah! Plot twist maksa dan ending menggantung tidak masuk akal sama sekali. Menyesal beli tiketnya.,0,Thriller,107,16
+"Jangan tonton film ini, plot twist maksa dan ending menggantung tidak masuk akal sama sekali. Hancur total.",0,Thriller,107,17
+"Sangat buruk kualitasnya, plot twist maksa dan ending menggantung tidak masuk akal sama sekali.",0,Thriller,95,14
+Zonk banget. Plot twist maksa dan ending menggantung tidak masuk akal sama sekali.,0,Thriller,82,13
+"Rugi waktu nonton, Plot twist maksa dan ending menggantung tidak masuk akal sama sekali.",0,Thriller,88,14
+"Lelucon sangat garing dan cringe, penonton satu studio bioskop hening tanpa tawa.",0,Comedy,81,12
+"Kecewa parah! Lelucon sangat garing dan cringe, penonton satu studio bioskop hening tanpa tawa. Menyesal beli tiketnya.",0,Comedy,119,17
+"Jangan tonton film ini, lelucon sangat garing dan cringe, penonton satu studio bioskop hening tanpa tawa. Hancur total.",0,Comedy,119,18
+"Sangat buruk kualitasnya, lelucon sangat garing dan cringe, penonton satu studio bioskop hening tanpa tawa.",0,Comedy,107,15
+"Zonk banget. Lelucon sangat garing dan cringe, penonton satu studio bioskop hening tanpa tawa.",0,Comedy,94,14
+"Rugi waktu nonton, Lelucon sangat garing dan cringe, penonton satu studio bioskop hening tanpa tawa.",0,Comedy,100,15
+"Konsep cerita fiksi ilmiah kacau, banyak plot hole fatal yang membingungkan.",0,Sci-Fi,76,11
+"Kecewa parah! Konsep cerita fiksi ilmiah kacau, banyak plot hole fatal yang membingungkan. Menyesal beli tiketnya.",0,Sci-Fi,114,16
+"Jangan tonton film ini, konsep cerita fiksi ilmiah kacau, banyak plot hole fatal yang membingungkan. Hancur total.",0,Sci-Fi,114,17
+"Sangat buruk kualitasnya, konsep cerita fiksi ilmiah kacau, banyak plot hole fatal yang membingungkan.",0,Sci-Fi,102,14
+"Zonk banget. Konsep cerita fiksi ilmiah kacau, banyak plot hole fatal yang membingungkan.",0,Sci-Fi,89,13
+"Rugi waktu nonton, Konsep cerita fiksi ilmiah kacau, banyak plot hole fatal yang membingungkan.",0,Sci-Fi,95,14
+"Bukan horor yang seram melainkan berisik, jumpscare murahan dan jalan cerita hancur.",0,Horror,84,12
+"Kecewa parah! Bukan horor yang seram melainkan berisik, jumpscare murahan dan jalan cerita hancur. Menyesal beli tiketnya.",0,Horror,122,17
+"Jangan tonton film ini, bukan horor yang seram melainkan berisik, jumpscare murahan dan jalan cerita hancur. Hancur total.",0,Horror,122,18
+"Sangat buruk kualitasnya, bukan horor yang seram melainkan berisik, jumpscare murahan dan jalan cerita hancur.",0,Horror,110,15
+"Zonk banget. Bukan horor yang seram melainkan berisik, jumpscare murahan dan jalan cerita hancur.",0,Horror,97,14
+"Rugi waktu nonton, Bukan horor yang seram melainkan berisik, jumpscare murahan dan jalan cerita hancur.",0,Horror,103,15
+"Kisah cinta klise murahan, dialog lebay dan chemistry antar karakter sangat hambar.",0,Romance,83,12
+"Kecewa parah! Kisah cinta klise murahan, dialog lebay dan chemistry antar karakter sangat hambar. Menyesal beli tiketnya.",0,Romance,121,17
+"Jangan tonton film ini, kisah cinta klise murahan, dialog lebay dan chemistry antar karakter sangat hambar. Hancur total.",0,Romance,121,18
+"Sangat buruk kualitasnya, kisah cinta klise murahan, dialog lebay dan chemistry antar karakter sangat hambar.",0,Romance,109,15
+"Zonk banget. Kisah cinta klise murahan, dialog lebay dan chemistry antar karakter sangat hambar.",0,Romance,96,14
+"Rugi waktu nonton, Kisah cinta klise murahan, dialog lebay dan chemistry antar karakter sangat hambar.",0,Romance,102,15
+"Pacing cerita sangat berantakan, perpindahan adegan meloncat-loncat membingungkan.",0,Drama,82,9
+"Kecewa parah! Pacing cerita sangat berantakan, perpindahan adegan meloncat-loncat membingungkan. Menyesal beli tiketnya.",0,Drama,120,14
+"Jangan tonton film ini, pacing cerita sangat berantakan, perpindahan adegan meloncat-loncat membingungkan. Hancur total.",0,Drama,120,15
+"Sangat buruk kualitasnya, pacing cerita sangat berantakan, perpindahan adegan meloncat-loncat membingungkan.",0,Drama,108,12
+"Zonk banget. Pacing cerita sangat berantakan, perpindahan adegan meloncat-loncat membingungkan.",0,Drama,95,11
+"Rugi waktu nonton, Pacing cerita sangat berantakan, perpindahan adegan meloncat-loncat membingungkan.",0,Drama,101,12
+"Kualitas naskah sangat buruk, dialog kaku tidak bernyawa buang-buang waktu.",0,Drama,75,11
+"Kecewa parah! Kualitas naskah sangat buruk, dialog kaku tidak bernyawa buang-buang waktu. Menyesal beli tiketnya.",0,Drama,113,16
+"Jangan tonton film ini, kualitas naskah sangat buruk, dialog kaku tidak bernyawa buang-buang waktu. Hancur total.",0,Drama,113,17
+"Sangat buruk kualitasnya, kualitas naskah sangat buruk, dialog kaku tidak bernyawa buang-buang waktu.",0,Drama,101,14
+"Zonk banget. Kualitas naskah sangat buruk, dialog kaku tidak bernyawa buang-buang waktu.",0,Drama,88,13
+"Rugi waktu nonton, Kualitas naskah sangat buruk, dialog kaku tidak bernyawa buang-buang waktu.",0,Drama,94,14
+"Adegan aksi kamera goyang berlebihan bikin pusing mual, koreografi tidak jelas.",0,Action,79,11
+"Kecewa parah! Adegan aksi kamera goyang berlebihan bikin pusing mual, koreografi tidak jelas. Menyesal beli tiketnya.",0,Action,117,16
+"Jangan tonton film ini, adegan aksi kamera goyang berlebihan bikin pusing mual, koreografi tidak jelas. Hancur total.",0,Action,117,17
+"Sangat buruk kualitasnya, adegan aksi kamera goyang berlebihan bikin pusing mual, koreografi tidak jelas.",0,Action,105,14
+"Zonk banget. Adegan aksi kamera goyang berlebihan bikin pusing mual, koreografi tidak jelas.",0,Action,92,13
+"Rugi waktu nonton, Adegan aksi kamera goyang berlebihan bikin pusing mual, koreografi tidak jelas.",0,Action,98,14
+"Karakter utama sangat menyebalkan dan tidak konsisten, jalan cerita monoton.",0,Adventure,76,10
+"Kecewa parah! Karakter utama sangat menyebalkan dan tidak konsisten, jalan cerita monoton. Menyesal beli tiketnya.",0,Adventure,114,15
+"Jangan tonton film ini, karakter utama sangat menyebalkan dan tidak konsisten, jalan cerita monoton. Hancur total.",0,Adventure,114,16
+"Sangat buruk kualitasnya, karakter utama sangat menyebalkan dan tidak konsisten, jalan cerita monoton.",0,Adventure,102,13
+"Zonk banget. Karakter utama sangat menyebalkan dan tidak konsisten, jalan cerita monoton.",0,Adventure,89,12
+"Rugi waktu nonton, Karakter utama sangat menyebalkan dan tidak konsisten, jalan cerita monoton.",0,Adventure,95,13
+"Musik latar terlalu keras menutupi suara dialog percakapan pemain, tata audio payah.",0,Horror,84,12
+"Kecewa parah! Musik latar terlalu keras menutupi suara dialog percakapan pemain, tata audio payah. Menyesal beli tiketnya.",0,Horror,122,17
+"Jangan tonton film ini, musik latar terlalu keras menutupi suara dialog percakapan pemain, tata audio payah. Hancur total.",0,Horror,122,18
+"Sangat buruk kualitasnya, musik latar terlalu keras menutupi suara dialog percakapan pemain, tata audio payah.",0,Horror,110,15
+"Zonk banget. Musik latar terlalu keras menutupi suara dialog percakapan pemain, tata audio payah.",0,Horror,97,14
+"Rugi waktu nonton, Musik latar terlalu keras menutupi suara dialog percakapan pemain, tata audio payah.",0,Horror,103,15
+"Ekspektasi tinggi tapi hasilnya zonk, sangat mengecewakan dan buang-buang tiket.",0,Umum,80,11
+"Kecewa parah! Ekspektasi tinggi tapi hasilnya zonk, sangat mengecewakan dan buang-buang tiket. Menyesal beli tiketnya.",0,Umum,118,16
+"Jangan tonton film ini, ekspektasi tinggi tapi hasilnya zonk, sangat mengecewakan dan buang-buang tiket. Hancur total.",0,Umum,118,17
+"Sangat buruk kualitasnya, ekspektasi tinggi tapi hasilnya zonk, sangat mengecewakan dan buang-buang tiket.",0,Umum,106,14
+"Zonk banget. Ekspektasi tinggi tapi hasilnya zonk, sangat mengecewakan dan buang-buang tiket.",0,Umum,93,13
+"Rugi waktu nonton, Ekspektasi tinggi tapi hasilnya zonk, sangat mengecewakan dan buang-buang tiket.",0,Umum,99,14
+"Durasi terasa sangat lama dan membosankan, ingin segera keluar studio bioskop.",0,Drama,78,11
+"Kecewa parah! Durasi terasa sangat lama dan membosankan, ingin segera keluar studio bioskop. Menyesal beli tiketnya.",0,Drama,116,16
+"Jangan tonton film ini, durasi terasa sangat lama dan membosankan, ingin segera keluar studio bioskop. Hancur total.",0,Drama,116,17
+"Sangat buruk kualitasnya, durasi terasa sangat lama dan membosankan, ingin segera keluar studio bioskop.",0,Drama,104,14
+"Zonk banget. Durasi terasa sangat lama dan membosankan, ingin segera keluar studio bioskop.",0,Drama,91,13
+"Rugi waktu nonton, Durasi terasa sangat lama dan membosankan, ingin segera keluar studio bioskop.",0,Drama,97,14
+"Penjahatnya konyol tanpa motif jelas, pertarungan akhir antiklimaks yang payah.",0,Action,79,10
+"Kecewa parah! Penjahatnya konyol tanpa motif jelas, pertarungan akhir antiklimaks yang payah. Menyesal beli tiketnya.",0,Action,117,15
+"Jangan tonton film ini, penjahatnya konyol tanpa motif jelas, pertarungan akhir antiklimaks yang payah. Hancur total.",0,Action,117,16
+"Sangat buruk kualitasnya, penjahatnya konyol tanpa motif jelas, pertarungan akhir antiklimaks yang payah.",0,Action,105,13
+"Zonk banget. Penjahatnya konyol tanpa motif jelas, pertarungan akhir antiklimaks yang payah.",0,Action,92,12
+"Rugi waktu nonton, Penjahatnya konyol tanpa motif jelas, pertarungan akhir antiklimaks yang payah.",0,Action,98,13
+"Animasi kaku dan warna redup tidak menarik, cerita membingungkan anak-anak.",0,Animation,75,11
+"Kecewa parah! Animasi kaku dan warna redup tidak menarik, cerita membingungkan anak-anak. Menyesal beli tiketnya.",0,Animation,113,16
+"Jangan tonton film ini, animasi kaku dan warna redup tidak menarik, cerita membingungkan anak-anak. Hancur total.",0,Animation,113,17
+"Sangat buruk kualitasnya, animasi kaku dan warna redup tidak menarik, cerita membingungkan anak-anak.",0,Animation,101,14
+"Zonk banget. Animasi kaku dan warna redup tidak menarik, cerita membingungkan anak-anak.",0,Animation,88,13
+"Rugi waktu nonton, Animasi kaku dan warna redup tidak menarik, cerita membingungkan anak-anak.",0,Animation,94,14
+"Film terburuk yang pernah saya tonton tahun ini, sangat tidak direkomendasikan!",0,Umum,79,11
+"Kecewa parah! Film terburuk yang pernah saya tonton tahun ini, sangat tidak direkomendasikan! Menyesal beli tiketnya.",0,Umum,117,16
+"Jangan tonton film ini, film terburuk yang pernah saya tonton tahun ini, sangat tidak direkomendasikan! Hancur total.",0,Umum,117,17
+"Sangat buruk kualitasnya, film terburuk yang pernah saya tonton tahun ini, sangat tidak direkomendasikan!",0,Umum,105,14
+"Zonk banget. Film terburuk yang pernah saya tonton tahun ini, sangat tidak direkomendasikan!",0,Umum,92,13
+"Rugi waktu nonton, Film terburuk yang pernah saya tonton tahun ini, sangat tidak direkomendasikan!",0,Umum,98,14
+"Ending film sangat merusak keseluruhan cerita, kesal sekali menontonnya.",0,Mystery,72,9
+"Kecewa parah! Ending film sangat merusak keseluruhan cerita, kesal sekali menontonnya. Menyesal beli tiketnya.",0,Mystery,110,14
+"Jangan tonton film ini, ending film sangat merusak keseluruhan cerita, kesal sekali menontonnya. Hancur total.",0,Mystery,110,15
+"Sangat buruk kualitasnya, ending film sangat merusak keseluruhan cerita, kesal sekali menontonnya.",0,Mystery,98,12
+"Zonk banget. Ending film sangat merusak keseluruhan cerita, kesal sekali menontonnya.",0,Mystery,85,11
+"Rugi waktu nonton, Ending film sangat merusak keseluruhan cerita, kesal sekali menontonnya.",0,Mystery,91,12
+Sutradara gagal mengeksekusi premis yang sebenarnya punya potensi bagus.,0,Sci-Fi,72,9
+Kecewa parah! Sutradara gagal mengeksekusi premis yang sebenarnya punya potensi bagus. Menyesal beli tiketnya.,0,Sci-Fi,110,14
+"Jangan tonton film ini, sutradara gagal mengeksekusi premis yang sebenarnya punya potensi bagus. Hancur total.",0,Sci-Fi,110,15
+"Sangat buruk kualitasnya, sutradara gagal mengeksekusi premis yang sebenarnya punya potensi bagus.",0,Sci-Fi,98,12
+Zonk banget. Sutradara gagal mengeksekusi premis yang sebenarnya punya potensi bagus.,0,Sci-Fi,85,11
+"Rugi waktu nonton, Sutradara gagal mengeksekusi premis yang sebenarnya punya potensi bagus.",0,Sci-Fi,91,12
